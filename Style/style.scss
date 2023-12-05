@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(247, 247, 247)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 32px;
+}
+
+i{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+ul{
+    list-style: none
+}
+
+@import 'nav';
+@import 'tion1';
+@import 'tion2';
+@import 'tion3';
+@import 'tion4';
+@import 'tion5';
+@import 'tion6';
+@import 'tion7';
+@import 'footer';
+@import 'modal';

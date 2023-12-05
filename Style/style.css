@@ -1,0 +1,815 @@
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 32px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  transition: all 0.5s ease;
+  padding: 20px 0;
+}
+nav .navcont {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .navcont #icon {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  display: none;
+}
+nav .navcont .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  gap: 20px;
+}
+nav .navcont .menu .ul-a {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+nav .navcont .menu .drop {
+  position: relative;
+}
+nav .navcont .menu .drop .drop-menu {
+  background-color: white;
+  position: absolute;
+  width: 160px;
+  padding: 14px;
+  left: 0;
+  top: 40px;
+  transition: 0.5s ease;
+  display: none;
+}
+nav .navcont .menu .drop .drop-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+}
+nav .navcont .menu .drop:hover .drop-menu {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+  nav .navcont {
+    width: 90%;
+  }
+  nav .navcont #icon {
+    display: block;
+  }
+  nav .navcont .menu {
+    display: none;
+  }
+}
+.tion1 {
+  background-image: url("https://preview.colorlib.com/theme/robotics/img/banner-bg.jpg.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+}
+.tion1 .tion1con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tion1 .tion1con .tion11 {
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
+  gap: 30px;
+  flex-direction: column;
+}
+.tion1 .tion1con .tion11 h2 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 300;
+}
+.tion1 .tion1con .tion11 p {
+  color: white;
+}
+.tion1 .tion1con .tion11 button {
+  color: #222;
+  padding: 13px 25px;
+  border: none;
+  transition: all 0.5s ease;
+}
+.tion1 .tion1con .tion11 button:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.tion1 .tion1con .tion12 {
+  width: 45%;
+  min-width: 350px;
+  min-height: 350px;
+}
+.tion1 .tion1con .tion12 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+  .tion1 {
+    width: 100%;
+    height: 100%;
+  }
+  .tion1 .tion1con {
+    width: 90%;
+    flex-direction: column;
+  }
+  .tion1 .tion1con .tion11 {
+    width: 100%;
+  }
+  .tion1 .tion1con .tion11 h1 {
+    font-size: 10px;
+  }
+}
+.tion2 {
+  width: 100%;
+  padding: 60px 0;
+  background-color: rgb(247, 247, 247);
+}
+.tion2 .tion2con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.tion2 .tion2con .tion21 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.tion2 .tion2con .tion21 h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+.tion2 .tion2con .tion21 p {
+  color: gray;
+}
+.tion2 .tion2con .tion22 {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.tion2 .tion2con .tion22 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px white solid;
+  border-radius: 10px;
+  background-color: white;
+  gap: 20px;
+}
+.tion2 .tion2con .tion22 .card .img {
+  width: 45%;
+  height: 100%;
+  padding: 20px;
+}
+.tion2 .tion2con .tion22 .card .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tion2 .tion2con .tion22 .card .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(242, 242, 242);
+}
+.tion2 .tion2con .tion22 .card .text h5 {
+  font-size: 20px;
+}
+.tion2 .tion2con .tion22 .card .text p {
+  color: gray;
+}
+.tion2 .tion2con .tion22 .card .text button {
+  color: rgb(33, 33, 33);
+  padding: 13px 25px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.tion2 .tion2con .tion22 .card .text button:hover {
+  color: white;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+
+@media screen and (max-width: 1023px) {
+  .tion2 {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #f8f8f8;
+  }
+  .tion2 .tion2con .tion21 {
+    gap: 10px;
+  }
+  .tion2 .tion2con .tion22 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tion2 .tion2con .tion22 .card {
+    gap: 20px;
+  }
+  .tion2 .tion2con .tion22 .card .img {
+    width: 30%;
+    min-width: 100px;
+    max-width: 200px;
+  }
+}
+.tion3 {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+.tion3 .tion3con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.tion3 .tion3con .tion31 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tion3 .tion3con .tion31 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tion3 .tion3con .tion32 {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: start;
+}
+.tion3 .tion3con .tion32 h2 {
+  font-size: 40px;
+}
+.tion3 .tion3con .tion32 h6 {
+  font-size: 15px;
+  color: darkgray;
+  font-weight: 100;
+}
+.tion3 .tion3con .tion32 p {
+  color: gray;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
+}
+.tion3 .tion3con .tion32 button {
+  color: #f8f8f8;
+  padding: 13px 25px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+.tion3 .tion3con .tion32 button:hover {
+  background: white;
+  color: #222;
+}
+
+@media screen and (max-width: 1023px) {
+  .tion3 .tion3con {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .tion3 .tion3con .tion31 {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .tion3 .tion3con .tion32 {
+    width: 100%;
+  }
+}
+.tion4 {
+  width: 100%;
+  padding: 60px 0;
+  background-color: rgb(247, 247, 247);
+}
+.tion4 .tion4con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.tion4 .tion4con .tion41 {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: start;
+}
+.tion4 .tion4con .tion41 a {
+  color: navy;
+  font-size: 15px;
+}
+.tion4 .tion4con .tion41 h2 {
+  font-size: 40px;
+}
+.tion4 .tion4con .tion41 h6 {
+  font-size: 15px;
+  color: darkgray;
+  font-weight: 100;
+}
+.tion4 .tion4con .tion41 p {
+  color: gray;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
+}
+.tion4 .tion4con .tion41 button {
+  color: rgb(247, 247, 247);
+  padding: 13px 25px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+.tion4 .tion4con .tion41 button:hover {
+  background: white;
+  color: rgb(33, 33, 33);
+}
+.tion4 .tion4con .tion42 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tion4 .tion4con .tion42::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+.tion4 .tion4con .tion42 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+  .tion4 .tion4con {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .tion4 .tion4con .tion41 {
+    width: 100%;
+  }
+  .tion4 .tion4con .tion42 {
+    width: 100%;
+  }
+}
+.tion5 {
+  background-image: url("https://preview.colorlib.com/theme/robotics/img/feature-bg.jpg.webp");
+  width: 100%;
+  padding: 120px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tion5 .tion5con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.tion5 .tion5con .tion51 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+.tion5 .tion5con .tion51 h1 {
+  color: white;
+  font-size: 35px;
+}
+.tion5 .tion5con .tion52 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.tion5 .tion5con .tion52 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+.tion5 .tion5con .tion52 .card:hover .top1 {
+  color: rgb(58, 58, 214);
+}
+.tion5 .tion5con .tion52 .card .top1 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease;
+}
+.tion5 .tion5con .tion52 .card .bot p {
+  color: gray;
+}
+
+@media screen and (max-width: 1023px) {
+  .tion5 .tion5con .tion51 {
+    text-align: center;
+  }
+  .tion5 .tion5con .tion52 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.tion6 {
+  width: 100%;
+  padding: 50px 0;
+}
+.tion6 .tion6con {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tion6 .tion6con .tion6 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+}
+.tion6 .tion6con .tion6 .img {
+  width: 100%;
+  height: 100%;
+}
+.tion6 .tion6con .tion6 .img img {
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tion7 {
+  width: 100%;
+  padding: 100px 0;
+}
+.tion7 .tion7con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+.tion7 .tion7con .tion71,
+.tion7 .tion7con .tion72 {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.tion7 .tion7con .tion71 .button,
+.tion7 .tion7con .tion72 .button {
+  display: flex;
+  gap: 10px;
+}
+.tion7 .tion7con .tion71 .button button,
+.tion7 .tion7con .tion72 .button button {
+  color: rgb(247, 247, 247);
+  padding: 13px 25px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+.tion7 .tion7con .tion71 .button button:hover,
+.tion7 .tion7con .tion72 .button button:hover {
+  background: white;
+  color: #222;
+}
+.tion7 .tion7con .tion71 .img,
+.tion7 .tion7con .tion72 .img {
+  width: 100%;
+}
+.tion7 .tion7con .tion71 .img img,
+.tion7 .tion7con .tion72 .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.tion7 .tion7con .tion71 .text,
+.tion7 .tion7con .tion72 .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.tion7 .tion7con .tion71 .text h1,
+.tion7 .tion7con .tion72 .text h1 {
+  font-size: 20px;
+}
+.tion7 .tion7con .tion71 .text h1:hover,
+.tion7 .tion7con .tion72 .text h1:hover {
+  cursor: pointer;
+}
+.tion7 .tion7con .tion71 .text p,
+.tion7 .tion7con .tion72 .text p {
+  color: gray;
+  line-height: 22px;
+  font-size: 15px;
+}
+.tion7 .tion7con .tion71 .text span,
+.tion7 .tion7con .tion72 .text span {
+  font-size: 14px;
+  font-weight: 400;
+  color: lightgray;
+  color: rgb(28, 26, 26);
+}
+
+@media screen and (max-width: 1023px) {
+  .tion7 .tion7con {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .tion7 .tion7con .tion71 {
+    width: 100%;
+  }
+  .tion7 .tion7con .tion72 {
+    width: 100%;
+  }
+}
+footer {
+  background-image: url("https://preview.colorlib.com/theme/robotics/img/footer-bg.jpg.webp");
+  width: 100%;
+  padding: 120px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer .footcont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+footer .footcont .fon1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  flex-wrap: wrap;
+}
+footer .footcont .fon1 .child1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  font-weight: 100;
+}
+footer .footcont .fon1 .child1 h3 {
+  font-size: 20px;
+}
+footer .footcont .fon1 .child1 ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+footer .footcont .fon1 .child2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  font-weight: 100;
+}
+footer .footcont .fon1 .child2 h2 {
+  font-size: 20px;
+}
+footer .footcont .fon1 .child2 .input {
+  display: flex;
+  gap: 10px;
+}
+footer .footcont .fon1 .child2 .input input {
+  border-radius: 25px;
+  padding: 15px 90px 15px 15px;
+  outline: none;
+  transition: all 1s ease;
+  border: none;
+  background-color: #f8f8f8;
+}
+footer .footcont .fon1 .child2 .input input:focus {
+  border: 2px solid;
+}
+footer .footcont .fon1 .child2 .input button {
+  width: 40%;
+  color: #f8f8f8;
+  padding: 13px 25px;
+  border: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+footer .footcont .fon1 .child2 .input button:hover {
+  background: white;
+  color: #222;
+}
+footer .footcont .fon1 .child3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+footer .footcont .fon1 .child3 .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+footer .footcont .fon2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footcont .fon2 a {
+  font-size: 15px;
+  color: white;
+  width: 50%;
+}
+footer .footcont .fon2 span,
+footer .footcont .fon2 i {
+  color: #828fff;
+}
+footer .footcont .fon2 .menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 15px;
+  width: 45%;
+  gap: 20px;
+}
+footer .footcont .fon2 .menu-icon i {
+  background-color: #222;
+  padding: 10px;
+  color: white;
+}
+footer .footcont .fon2 .menu-icon i:hover {
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+
+@media screen and (max-width: 991px) {
+  footer .footcont .fon1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  footer .footcont .fon1 .input {
+    width: 100%;
+    flex-direction: column;
+  }
+  footer .footcont .fon2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.modal-bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  z-index: 1000;
+  display: none;
+}
+.modal-bg .modal-menu {
+  width: 30%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  padding: 50px 30px;
+  left: 0;
+  top: 0;
+  z-index: 1001;
+}
+.modal-bg .modal-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  gap: 20px;
+}
+.modal-bg .modal-menu .menu .ul-a {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modal-bg .modal-menu .menu .drop {
+  position: relative;
+}
+.modal-bg .modal-menu .menu .drop .drop-menu {
+  background-color: white;
+  position: absolute;
+  width: 160px;
+  padding: 14px;
+  left: 0;
+  top: 40px;
+  transition: 0.5s ease;
+  display: none;
+}
+.modal-bg .modal-menu .menu .drop .drop-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+}
+.modal-bg .modal-menu .menu .drop:hover .drop-menu {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal-bg p {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
