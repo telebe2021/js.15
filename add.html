@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="./add.css">
+</head>
+<body>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <br>
+    
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <br>
+    
+        <label for="category">Category:</label>
+        <input type="text" id="Category" Category="Category" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script src="./add.js"></script>
+</body>
+</html>
