@@ -7,22 +7,24 @@
     <title>Document</title><link rel="stylesheet" href="./assets/Style/add.css">
 </head>
 <body>
-    <form action="/submit" method="post" enctype="multipart/form-data">
-        <label for="image">Image:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-        <br>
-    
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <br>
-    
-        <label for="category">Category:</label>
-        <input type="text" id="Category" Category="Category" required>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-    
+    <div>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <br>
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+        
+            <label for="category">Category:</label>
+            <input type="text" id="Category" Category="Category" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        
+    </div>
     <script src="./assets/Script/add.js"></script>
 </body>
 </html>
