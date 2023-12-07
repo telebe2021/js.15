@@ -62,6 +62,7 @@
             <div class="tion22">
                 
             </div>
+            <button  style="background-color: blue; color: white;width: 120px;height: 30px;" class="load">Load More</button>
         </div>
     </div>
 
@@ -288,7 +289,21 @@
         </div>
         <p class="close">X</p>
     </div>
-
+    <div class="divForm">
+        <div class="img"><img src="https://preview.colorlib.com/theme/robotics/img/p1.png" alt=""></div>
+        <form action="/submit" method="post" class="form" enctype="multipart/form-data">
+          
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+        
+            <label for="category">Category:</label>
+            <input type="text" id="Category" Category="Category" required>
+        
+            <input style="background-color: blue; color: white;" type="submit" value="Submit">
+        </form>
+        
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/Script/script.js"></script>
 </body>

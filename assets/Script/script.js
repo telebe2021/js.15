@@ -1,4 +1,6 @@
 const nav = document.querySelector("nav");
+let page = 4;
+
 window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
     if (scrolled > 50) {
@@ -25,12 +27,14 @@ document.addEventListener('click', (event) => {
     }
 });
       //-----Fetch-----//
-
+function  showData() {
 fetch('http://localhost:3000/robots')
     .then(res => res.json())
     .then(data => {  
         console.log(data);
-        data.forEach(robot => {
+        data.slice(page - 4, page).forEach(robot => {
+
+
             document.querySelector('.tion22').innerHTML += `
             <div class="card">
                     <div class="img"><img src="${robot.image}" alt=""></div>
@@ -39,10 +43,18 @@ fetch('http://localhost:3000/robots')
                         <p>${robot.description}</p>
                         <a href="../details.html?id=${robot.id}"><button onclick="deleteData(${robot.id})"> VIEW DETAILS</button></a>
                         <button onclick="deleteRobot(${robot.id})"> Delete</button>
+                        <button onclick="UpdateRobot(${robot.id})">Update</button>
                         </div>
                 </div>`
         });
     });
+}
+showData()
+document.querySelector('.load').addEventListener('click',()=>{
+    page+=4;
+    showData();
+    event.target.style.display='none'
+})
 
     function deleteRobot(id){
         axios.delete(`http://localhost:3000/robots/${id}`);
